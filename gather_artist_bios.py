@@ -21,6 +21,8 @@ def get_artist_bio(artist_name: str):
             return bio
     except pylast.WSError:
         print(f"Bio for {artist_name} cannot be found.")
+    except pylast.MalformedResponseError:
+        print(f"Bio for {artist_name} cannot be found.")
 
 
 def dump_artist_bio(bio: str, path: str):

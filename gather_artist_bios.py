@@ -46,8 +46,10 @@ if __name__ == '__main__':
     directory = 'data/raw/bios'
     already_written_artist = set(get_already_written_artists(directory))
     artist_names = set(load_artist_names('data/artists.txt'))
+    artists_to_load = artist_names.difference(already_written_artist)
 
-    for artist_name in artist_names.difference(already_written_artist):
+    print(f"Loading bios for {len(artists_to_load)}")
+    for artist_name in artists_to_load:
         if artist_name in already_written_artist:
             continue
         print(f"Loading bio for {artist_name}")

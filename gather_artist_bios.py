@@ -51,5 +51,6 @@ if __name__ == '__main__':
         print(f"Loading bio for {artist_name}")
         path = f'{directory}/{artist_name}-bio.txt'
         bio = get_artist_bio(artist_name)
+
         if bio:
             dump_artist_bio(bio, path)

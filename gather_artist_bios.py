@@ -34,8 +34,11 @@ def dump_artist_bio(bio: str, path: str):
 
 
 def load_artist_names(path):
-    with open(path, 'r') as f:
-        return [artist_name.strip() for artist_name in f.readlines()]
+    try:
+        with open(path, 'r') as f:
+            return [artist_name.strip() for artist_name in f.readlines()]
+    except FileNotFoundError:
+        return []
 
 
 def save_artist_wo_bio(artist_name, path):
@@ -51,10 +54,10 @@ if __name__ == '__' \
                'main__':
     directory = 'data/raw/bios'
     artist_names_path = 'data/artists.txt'
-    aritsts_wo_bio_path = 'data/artists-wo-bio.txt'
+    artists_wo_bio_path = 'data/artists-wo-bio.txt'
     already_written_artist = set(get_already_written_artists(directory))
     artist_names = set(load_artist_names(artist_names_path))
-    artists_wo_bio = set(load_artist_names(aritsts_wo_bio_path))
+    artists_wo_bio = set(load_artist_names(artists_wo_bio_path))
 
     artists_to_load = artist_names.difference(already_written_artist).difference(artists_wo_bio)
 
@@ -63,9 +66,9 @@ if __name__ == '__' \
         if artist_name in already_written_artist:
             continue
         print(f"Loading bio for {artist_name}")
-        path = f'{directory}/{artist_name}-bio.txt'
         bio = get_artist_bio(artist_name)
         if bio:
-            dump_artist_bio(bio, directory)
+            path = f'{directory}/{artist_name}-bio.txt'
+            dump_artist_bio(bio, path)
         else:
-            save_artist_wo_bio(artist_name)
+            save_artist_wo_bio(artist_name, artists_wo_bio_path)

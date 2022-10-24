@@ -1,0 +1,22 @@
+strøm are Gaudenz Badrutt, pianist and electronic musician (*1972) and Christian Müller (*1971), clarinettist and electronic musician. Under the name of strøm the two artists from Biel mix since 2001 various ingredients: free improvisation with conceptual music, contemporary music ideas with free jazz explosions, down to earth, drifty energy with spherical sound. The duo mixes electro-acoustic chamber music skillfully with allusions to contemporary pop-aesthetics. Both musicians studied at the University of Music and Performing Arts Berne/Biel but exposed themselves to manifold influences which they make use of in an experimental way. Under stage director Barbara-David Brüesch strøm  produced a variety of theatre music (e.g. for the Stadttheater Berne, the Staatstheater Stuttgart, Schauspielhaus Wien), played in rock cellars, at art openings, in the scope of installationary open-air concerts and with various musicians, such as Hans Koch, Martin Schütz, Ernst Thoma, Tomas Korber, Urs Leimgruber and Jacques Demierre. Installations in different contexts (e.g. at Bieler Fototage, Passage Kunsthaus Zürich) are another field of work.
+
+
+
+From the STEIM diaries:
+
+Our one-week-residency at Steim was a intense experience: After having done some produced, musical works for surround systems, we have wanted to find out, if that would be also possible in a live-context to enlarge our conventional set-up. So we have worked on a quadrophonic live-set-up with our common equipment of bass- and contrabass-clarinet, modular-synthesizer A-100, FX-pedals and LiSa. So the routing and exact control of a signal within LiSa in a quadrophonic environment is not directly achievable, we have tried different ways to get to an intuitive control-interface. Beside that we have achieved a solution within LiSa we have preferred a solution that has worked with a combination of LiSa with Max/MSP: Max to control and produce the MIDI-messages for the routing, LiSa to handle the audio-part of the system. That way we have achieved to control movements with an easy graphical interface as well as self-modulated, automatic movements, but not losing our normal audio-interface ‘LiSa’ to play in our familiar instrument.
+
+So far to the main technical approach that we have tried out in this week. The goal to have after this week certain pragmatical instruments to use further on  was achieved. Another thing was the spirit and atmosphere we had around as while working: The studio III of Steim, in which we have worked as well as the persons we have had around us. So on one side, we had in the studio a very good condition to work with a quadrophonic system - the space was big enough, the speakers were nice and powerful and the technical support was perfect. On the other hand and as long-time-user of LiSa it was very helpful to have Robert van Heumen and Frank Balde as experts for very specific questions. They could give helpful suggestions for concrete problems and in fundamental approaches to certain problems.
+Beside the technical discussions and approaches we have also taken our time to practise in this set-up. A complicate and sophisticated set-up does not mean that there is good music and so it was also very important for us to check out, if we can really play with that. That for, the studio as well as the spirit of the whole house were perfect.
+And so during this week there was a very exciting mix between theoretical studies, try-and-error-experiments, discussions about musical sense of a quadrophonic system, practising, getting in touch with new technological ideas like the Junxion-board and a lot more.
+And so we take a lot out of this week: some practical instruments and tools, a lot of musical thoughts and some food for technical ideas: Junxion-board connected with the Doepfer A-100 modularsynthesizer as well as controlling-possibilities on the bass-clarinet.
+
+In addition: Right now we are about to prepare our first live-surround-concert, an audio-visual piece called ‘magma’ for the transmediale 09 in Berlin. So the first practical result of our residency is on the way.
+
+www.shizophonic.ch
+
+
+
+
+
+ <a href="https://www.last.fm/music/+noredirect/Str%C3%B8m">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.

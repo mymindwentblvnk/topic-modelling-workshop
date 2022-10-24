@@ -1,0 +1,6 @@
+Keith Fullerton Whitman, from Somerville, Massachusetts, USA, is a composer/performer obsessed with electronic music; from its mid-century origins in Europe through its contemporary worldwide incarnation as "digital music."
+
+Currently he is working towards implementing a complete system for live performance of improvised electronic music that incorporates elements from nearly every era: a reel-to-reel tape machine, a selection of small "jerry-rigged" / "circuit-bent" battery-powered sound-producing boxes, an analog modular synthesizer, an early "consumer" home-computer, and at the core; a contemporary computer running a custom-built Max-MSP based modular system that both controls these elements and acts as a central conduit into which their sounds are captured/collected, processed, then diffused to up to eight separate channels/speakers/amplifiers.
+
+He is also, at present, composing an as-of-yet untitled piece for Egyptian Oud, Serge and Doepfer Analog Modular Synthesizers, and computer control/processing. It is his first through-composed long-form work.
+ <a href="https://www.last.fm/music/Keith+Fullerton+Whitman">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.

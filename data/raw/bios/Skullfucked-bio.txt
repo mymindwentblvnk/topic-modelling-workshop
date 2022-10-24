@@ -1,0 +1,1 @@
+A 1-man project that will make songs whenever the time is right. <a href="https://www.last.fm/music/Skullfucked">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.

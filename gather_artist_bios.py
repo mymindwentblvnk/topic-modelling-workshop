@@ -38,15 +38,25 @@ def load_artist_names(path):
         return [artist_name.strip() for artist_name in f.readlines()]
 
 
+def save_artist_wo_bio(artist_name, path):
+    with open(path, 'a') as out:
+        out.write(f"{artist_name}\n")
+
+
 def get_already_written_artists(path: str) -> list:
     return [f.replace('-bio.txt', '') for f in listdir(path) if isfile(join(path, f))]
 
 
-if __name__ == '__main__':
+if __name__ == '__' \
+               'main__':
     directory = 'data/raw/bios'
+    artist_names_path = 'data/artists.txt'
+    aritsts_wo_bio_path = 'data/artists-wo-bio.txt'
     already_written_artist = set(get_already_written_artists(directory))
-    artist_names = set(load_artist_names('data/artists.txt'))
-    artists_to_load = artist_names.difference(already_written_artist)
+    artist_names = set(load_artist_names(artist_names_path))
+    artists_wo_bio = set(load_artist_names(aritsts_wo_bio_path))
+
+    artists_to_load = artist_names.difference(already_written_artist).difference(artists_wo_bio)
 
     print(f"Loading bios for {len(artists_to_load)}")
     for artist_name in artists_to_load:
@@ -55,6 +65,7 @@ if __name__ == '__main__':
         print(f"Loading bio for {artist_name}")
         path = f'{directory}/{artist_name}-bio.txt'
         bio = get_artist_bio(artist_name)
-
         if bio:
-            dump_artist_bio(bio, path)
+            dump_artist_bio(bio, directory)
+        else:
+            save_artist_wo_bio(artist_name)

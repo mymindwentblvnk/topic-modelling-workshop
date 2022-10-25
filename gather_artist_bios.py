@@ -57,8 +57,8 @@ def get_already_written_artists(path: str) -> list:
 
 
 if __name__ == '__main__':
-    already_written_artist = set(get_already_written_artists(DIRECTORY))
     artist_names = set(load_artist_names(ARTIST_NAMES_PATH))
+    already_written_artist = set(get_already_written_artists(DIRECTORY))
     artists_wo_bio = set(load_artist_names(ARTISTS_WO_BIO_PATH))
 
     artists_to_load = artist_names.difference(already_written_artist).difference(artists_wo_bio)
@@ -72,4 +72,4 @@ if __name__ == '__main__':
         if bio:
             dump_artist_bio(artist_name, bio)
         else:
-            save_artist_wo_bio(artist_name, artists_wo_bio_path)
+            save_artist_wo_bio(artist_name, ARTISTS_WO_BIO_PATH)

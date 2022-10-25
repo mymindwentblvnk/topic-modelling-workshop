@@ -6,6 +6,11 @@ import pylast
 import settings
 
 
+DIRECTORY = 'data/raw/bios'
+ARTIST_NAMES_PATH = 'data/artists.txt'
+ARTISTS_WO_BIO_PATH = 'data/artists-wo-bio.txt'
+
+
 client = pylast.LastFMNetwork(api_key=settings.API_KEY,
                               api_secret=settings.API_SECRET,
                               username=settings.USER,
@@ -25,12 +30,13 @@ def get_artist_bio(artist_name: str):
         print(f"Bio for {artist_name} cannot be found.")
 
 
-def dump_artist_bio(bio: str, path: str):
+def dump_artist_bio(artist_name: str, bio: str):
     try:
-        with open(path, 'w') as out:
+        with open(f'{DIRECTORY}/{artist_name}-bio.txt', 'w') as out:
             out.write(bio)
     except FileNotFoundError:
         print(f"Bio for {artist_name} cannot be written.")
+        save_artist_wo_bio(artist_name, ARTISTS_WO_BIO_PATH)
 
 
 def load_artist_names(path):
@@ -50,14 +56,10 @@ def get_already_written_artists(path: str) -> list:
     return [f.replace('-bio.txt', '') for f in listdir(path) if isfile(join(path, f))]
 
 
-if __name__ == '__' \
-               'main__':
-    directory = 'data/raw/bios'
-    artist_names_path = 'data/artists.txt'
-    artists_wo_bio_path = 'data/artists-wo-bio.txt'
-    already_written_artist = set(get_already_written_artists(directory))
-    artist_names = set(load_artist_names(artist_names_path))
-    artists_wo_bio = set(load_artist_names(artists_wo_bio_path))
+if __name__ == '__main__':
+    already_written_artist = set(get_already_written_artists(DIRECTORY))
+    artist_names = set(load_artist_names(ARTIST_NAMES_PATH))
+    artists_wo_bio = set(load_artist_names(ARTISTS_WO_BIO_PATH))
 
     artists_to_load = artist_names.difference(already_written_artist).difference(artists_wo_bio)
 
@@ -68,7 +70,6 @@ if __name__ == '__' \
         print(f"Loading bio for {artist_name}")
         bio = get_artist_bio(artist_name)
         if bio:
-            path = f'{directory}/{artist_name}-bio.txt'
-            dump_artist_bio(bio, path)
+            dump_artist_bio(artist_name, bio)
         else:
             save_artist_wo_bio(artist_name, artists_wo_bio_path)

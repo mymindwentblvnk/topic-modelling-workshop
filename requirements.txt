@@ -6,3 +6,4 @@ beautifulsoup4==4.11.1
 requests==2.28.1
 pyLDAvis==3.3.1
 spacy==3.4.2
+google-cloud-storage==2.5.0
